@@ -14,5 +14,4 @@
 
 
 
-
 #endif /* PLATFORM_TYPES_H_ */

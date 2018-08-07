@@ -6,14 +6,14 @@
  */ 
 
 #include <avr/io.h>
-
-
+#include "Sci.h"
+Sci_ConfigType myobj;
 int main(void)
 {
-    /* Replace with your application code */
+    Sci_Init(&myobj);
     while (1) 
     {
-		
+		fsdfd
     }
 }
 

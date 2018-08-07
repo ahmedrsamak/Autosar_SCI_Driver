@@ -10,13 +10,22 @@
 #define SCI_H_
 #include "Std_types.h"
 #include "Sci_cfg.h"
+#include <avr/io.h>
+
+#ifndef F_CPU
+/* prevent compiler error by supplying a default */
+# warning "F_CPU not defined for SCI and defined with 1000000>"
+# define F_CPU 1000000UL
+#endif
+
 typedef struct
 {
 	//u8 UART_id;
 	u8 baud_rate; // baud_rate num
 	u8 parity; // Even, ODD, or NONE
 	u8 stop_bits; //1 or 2 
-	u8 interrupt_Enable; // disable or Enable
+	//u8 sync;
+	//u8 interrupt_Enable; // disable or Enable
 }Sci_ConfigType;
 
 typedef enum
