@@ -12,7 +12,7 @@ int main(void)
 {
     Sci_Init(&myobj);
     while (1) 
-    {
+    {dasdsa
 		fsdfd
     }
 }
