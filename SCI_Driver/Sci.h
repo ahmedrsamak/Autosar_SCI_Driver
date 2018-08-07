@@ -14,15 +14,19 @@
 
 #ifndef F_CPU
 /* prevent compiler error by supplying a default */
-# warning "F_CPU not defined for SCI and defined with 1000000>"
-# define F_CPU 1000000UL
+# warning "F_CPU not defined for SCI and defined with 1MHz>"
+# define F_CPU 1000000
 #endif
-
+typedef enum
+{
+ NONE,
+ 	
+}parity_t;
 typedef struct
 {
 	//u8 UART_id;
 	u8 baud_rate; // baud_rate num
-	u8 parity; // Even, ODD, or NONE
+	parity_t parity; // Even, ODD, or NONE
 	u8 stop_bits; //1 or 2 
 	//u8 sync;
 	//u8 interrupt_Enable; // disable or Enable

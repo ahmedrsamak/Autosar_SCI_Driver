@@ -159,7 +159,7 @@
     <Compile Include="Compiler.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="main.c">
+    <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Platform_types.h">
