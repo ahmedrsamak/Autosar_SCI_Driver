@@ -14,7 +14,7 @@ void Sci_Init(const Sci_ConfigType * ConfigPtr) //that reg for for uart0
 	  UCSRC |=(1<<URSEL); // select reg UCSRC
 	  UCSRC |=((ConfigPtr->parity)<<(UPM0)); // select parity
 	  UCSRC |=((ConfigPtr->stop_bits)<<(USBS)); // select stop_bits
-	  baud_rate_value=(((F_CPU/(8L)*(ConfigPtr->baud_rate)))-1); //set baud_rate value
+	  baud_rate_value=( (F_CPU / (8L * (ConfigPtr->baud_rate)) ) -1); //set baud_rate value
 	  UCSRC |=(1<<URSEL); // select reg UCSRC
 	  UCSRC &=~(1<<UMSEL);
 	  UBRRL &=~(1<<URSEL);
@@ -38,7 +38,9 @@ Std_ReturnType Sci_ReadRxData(Sci_ChannelType Channel, u8 *DataPtr) // select ua
 
 Sci_StatusType Sci_GetStatus(Sci_ChannelType Channel)
 {
+	
 Sci_StatusType sci_state;
+
 	return sci_state; // return status
 }
 

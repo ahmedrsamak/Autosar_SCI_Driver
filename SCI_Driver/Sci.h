@@ -15,8 +15,10 @@
 #ifndef F_CPU
 /* prevent compiler error by supplying a default */
 # warning "F_CPU not defined for SCI and defined with 1MHz>"
-# define F_CPU 1000000
+#define F_CPU 1000000
 #endif
+
+
 
 typedef enum
 {

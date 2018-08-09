@@ -4,3 +4,7 @@
 
 main.c
 
+Sci.c
+
+Sci_cfg.c
+
