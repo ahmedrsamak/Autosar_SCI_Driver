@@ -2,9 +2,5 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-main.cpp
-
-Sci.c
-
-Sci_cfg.c
+main.c
 

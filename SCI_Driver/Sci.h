@@ -17,6 +17,7 @@
 # warning "F_CPU not defined for SCI and defined with 1MHz>"
 # define F_CPU 1000000
 #endif
+
 typedef enum
 {
  NONE,
@@ -25,9 +26,9 @@ typedef enum
 typedef struct
 {
 	//u8 UART_id;
-	u8 baud_rate; // baud_rate num
-	parity_t parity; // Even, ODD, or NONE
+	u16 baud_rate; // baud_rate num
 	u8 stop_bits; //1 or 2 
+	parity_t parity; // Even, ODD, or NONE
 	//u8 sync;
 	//u8 interrupt_Enable; // disable or Enable
 }Sci_ConfigType;
@@ -52,7 +53,7 @@ typedef void (*Sci_TxErrNotification)(void);
 typedef void (*Sci_RxNotification)(void);
 typedef void (*Sci_RxErrNotification)(void);
 
-void Sci_Init(const Sci_ConfigType *ConfigPtr); //SCI Driver Initialization.
+void Sci_Init(const Sci_ConfigType * ConfigPtr); //SCI Driver Initialization.
 //void Sci_GetVersionInfo(Std_VersionInfoType *VersionInfoPtr); //SCI Driver version informations retrieval.
 Std_ReturnType Sci_WriteTxData(Sci_ChannelType Channel, u8 Data); //TX Data Write. returns E_OK or E_NOT_OK
 Std_ReturnType Sci_ReadRxData(Sci_ChannelType Channel, u8 *DataPtr); //RX Data Read. returns E_OK or E_NOT_OK
