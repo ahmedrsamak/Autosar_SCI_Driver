@@ -18,6 +18,8 @@
 #define E_OK 1
 #define E_NOT_OK 0
 
+#define UART0 0
+
 typedef u8 Std_ReturnType; //return E_ok or E_NOT_OK
 
 
